@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>比例计算器</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+	<style>
+    .calculator { width: 260px; margin: 10px auto; padding: 10px; border: 1px solid ; border-radius: 10px; }
+    .calculator1 { width: 258px; margin: 2px ; padding: 3px; border: 1px solid ; border-radius: 1px; }
+
+	.a{width: 120px;height: 30px;border:1px solid blue;}
+	.b{width: 255px;height: 30px;border:1px solid green;}
+	</style>
+
+<body>
+
+<div class="calculator">
+    <form id="ratioForm">
+			<h2 align="center">比例计算器</h2>
+		
+		 	<input type="number" id="ratioDenominator" value="16" required class="a"> : <input type="number" id="ratioNumerator" value="9" required class="a"> 
+	<br>
+			<input type="button" value="计算" onClick="calculateRatio()">
+	<br>
+		变量: <input type="number" id="number1" value="1920"  required>: <p id="result"></p>
+	<br>
+
+        <p id="result"></p>
+
+    </form>
+	
+	
+</div>	
+	
+    <script>
+        function calculateRatio() {
+            var number1 = parseFloat(document.getElementById('number1').value);
+            var numerator = parseFloat(document.getElementById('ratioNumerator').value);
+            var denominator = parseFloat(document.getElementById('ratioDenominator').value);
+            var ratio = numerator / denominator;
+            var result = number1 * ratio;
+            document.getElementById('result').innerText = '结果: ' + result;
+        }
+    </script>
+
+</body>
+</html>
