@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>计算百分比</title>
+    <script>
+      function calculatePercentage() {
+        var total = parseFloat(document.getElementById("total").value);
+        var part = parseFloat(document.getElementById("part").value);
+
+        var percentage = (part / total) * 100;
+        document.getElementById("result").innerHTML = "百分比：" + percentage + "%";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>计算百分比</h1>
+    <label for="total">总数：</label>
+    <input type="number" id="total">
+    <br>
+    <label for="part">部分：</label>
+    <input type="number" id="part">
+    <br>
+    <button onclick="calculatePercentage()">计算</button>
+    <div id="result"></div>
+  </body>
+</html>
